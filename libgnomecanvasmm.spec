@@ -8,9 +8,11 @@ Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
 # Source0-md5:	2582fe37698b3907c963468e7610efb0
 URL:		http://www.gnome.org/
+Buildrequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libgnomecanvas-devel >= 2.6.0
+BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -51,7 +53,10 @@ Biblioteka statyczna libgnomecanvasmm.
 %setup -q
 
 %build
-cp -f /usr/share/automake/config.sub scripts
+%{__libtoolize}
+%{__aclocal} -I scripts
+%{__autoconf}
+%{__automake}
 %configure \
 	--enable-static
 
