@@ -1,15 +1,16 @@
 Summary:	C++ wrappers for libgnomecanvas
 Summary(pl):	Interfejsy C++ dla libgnomecanvas
 Name:		libgnomecanvasmm
-Version:	2.0.1
+Version:	2.6.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	f6beefb0fe523e17c39435cb5775f300
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.6/%{name}-%{version}.tar.bz2
+# Source0-md5:	2582fe37698b3907c963468e7610efb0
 URL:		http://www.gnome.org/
-BuildRequires:	gtkmm-devel >= 2.2.7
-BuildRequires:	libgnomecanvas-devel >= 2.3.6
+Buildrequires:	automake
+BuildRequires:	gtkmm-devel >= 2.4.0
+BuildRequires:	libgnomecanvas-devel >= 2.6.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,9 +24,10 @@ Interfejsy C++ dla libgnomecanvas.
 Summary:	Devel files for libgnomecanvasmm
 Summary(pl):	Pliki nag³ówkowe dla libgnomecanvasmm
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
-Requires:	gtkmm-devel >= 2.2.7
-Requires:	libgnomecanvas-devel >= 2.3.6
+Requires:	%{name} = %{version}-%{release}
+Requires:	gtkmm-devel >= 2.4.0
+Requires:	libart_lgpl-devel >= 2.3.16
+Requires:	libgnomecanvas-devel >= 2.6.0
 
 %description devel
 Devel files for libgnomecanvasmm.
@@ -37,7 +39,7 @@ Pliki nag³ówkowe dla libgnomecancasmm.
 Summary:	libgnomecanvasmm static library
 Summary(pl):	Biblioteka statyczna libgnomecanvasmm
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 libgnomecanvasmm static library.
@@ -69,15 +71,16 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_libdir}/libgnomecanvasmm*.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgnomecanvasmm*.so
 %{_libdir}/libgnomecanvasmm*.la
-%{_libdir}/%{name}-2.0
-%{_includedir}/%{name}-2.0
-%{_pkgconfigdir}/%{name}-2.0.pc
+%{_libdir}/%{name}-2.6
+%{_includedir}/%{name}-2.6
+%{_pkgconfigdir}/%{name}-2.6.pc
 
 %files static
 %defattr(644,root,root,755)
