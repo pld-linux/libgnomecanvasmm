@@ -1,0 +1,27 @@
+--- libgnomecanvasmm-2.6.0/libgnomecanvas/libgnomecanvasmm/item.cc.orig	2004-04-07 21:07:06.000000000 +0200
++++ libgnomecanvasmm-2.6.0/libgnomecanvas/libgnomecanvasmm/item.cc	2004-04-19 21:19:03.295646063 +0200
+@@ -41,11 +41,22 @@
+ namespace Canvas
+ {
+ 
++static void
++gnome_canvas_item_construct_help(GnomeCanvasItem *item,
++	GnomeCanvasGroup *parent, const gchar *first_arg_name, ...)
++{
++  va_list args;
++
++  va_start(args, first_arg_name);
++  gnome_canvas_item_construct(item, parent, first_arg_name, args);
++  va_end(args);
++}
++
+ void
+ Item::item_construct(Group& group)
+ {
+-  gnome_canvas_item_construct(GNOME_CANVAS_ITEM(gobj()), group.gobj(),
+-                              0, 0);
++  gnome_canvas_item_construct_help(GNOME_CANVAS_ITEM(gobj()), group.gobj(),
++                              NULL);
+ }
+ 
+ void
