@@ -1,15 +1,15 @@
 Summary:	C++ wrappers for libgnomecanvas
 Summary(pl):	Interfejsy C++ dla libgnomecanvas
 Name:		libgnomecanvasmm
-Version:	2.0.1
+Version:	2.5.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
-# Source0-md5:	f6beefb0fe523e17c39435cb5775f300
+Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	579330d8a14eec5c496e1dce49e9a3b4
 URL:		http://www.gnome.org/
-BuildRequires:	gtkmm-devel >= 2.2.7
-BuildRequires:	libgnomecanvas-devel >= 2.3.6
+BuildRequires:	gtkmm-devel >= 2.3.1
+BuildRequires:	libgnomecanvas-devel >= 2.5.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -24,8 +24,9 @@ Summary:	Devel files for libgnomecanvasmm
 Summary(pl):	Pliki nag³ówkowe dla libgnomecanvasmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	gtkmm-devel >= 2.2.7
-Requires:	libgnomecanvas-devel >= 2.3.6
+Requires:	gtkmm-devel >= 2.3.1
+Requires:	libart_lgpl-devel
+Requires:	libgnomecanvas-devel >= 2.5.0
 
 %description devel
 Devel files for libgnomecanvasmm.
@@ -68,6 +69,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_libdir}/libgnomecanvasmm*.so.*.*.*
 
 %files devel
@@ -75,8 +77,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/libgnomecanvasmm*.so
 %{_libdir}/libgnomecanvasmm*.la
 %{_libdir}/%{name}-2.0
-%{_includedir}/%{name}-2.0
-%{_pkgconfigdir}/%{name}-2.0.pc
+%{_libdir}/%{name}-2.6
+%{_includedir}/%{name}-2.6
+%{_pkgconfigdir}/%{name}-2.6.pc
 
 %files static
 %defattr(644,root,root,755)
