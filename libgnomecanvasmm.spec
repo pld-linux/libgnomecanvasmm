@@ -5,12 +5,12 @@ Version:	2.8.0
 Release:	1
 License:	GPL
 Group:		Libraries
-Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.8/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/gnome/sources/libgnomecanvasmm/2.8/%{name}-%{version}.tar.bz2
 # Source0-md5:	2ddc212bb4589369c5a5aa2edce6ce8d
 Patch0:		%{name}-va.patch
 URL:		http://www.gnome.org/
-Buildrequires:	autoconf
-Buildrequires:	automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtkmm-devel >= 2.4.5
 BuildRequires:	libgnomecanvas-devel >= 2.8.0
 BuildRequires:	libtool >= 2:1.4d
