@@ -23,6 +23,8 @@ Summary:	Devel files for libgnomecanvasmm
 Summary(pl):	Pliki nag³ówkowe dla libgnomecanvasmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	gtkmm-devel >= 2.2.7
+Requires:	libgnomecanvas-devel >= 2.3.6
 
 %description devel
 Devel files for libgnomecanvasmm.
@@ -47,7 +49,7 @@ Biblioteka statyczna libgnomecanvasmm.
 
 %build
 %configure \
-	--enable-static=yes
+	--enable-static
 
 %{__make}
 
@@ -69,10 +71,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/%{name}-2.0
+%attr(755,root,root) %{_libdir}/libgnomecanvasmm*.so
 %{_libdir}/libgnomecanvasmm*.la
-%{_libdir}/libgnomecanvasmm*.so
 %{_libdir}/%{name}-2.0
+%{_includedir}/%{name}-2.0
 %{_pkgconfigdir}/%{name}-2.0.pc
 
 %files static
