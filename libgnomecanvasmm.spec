@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.tar.bz2
+# Source0-md5:	cf73a7cd296225dca350ae7f882686ae
 URL:		http://www.gnome.org/
 BuildRequires:	gtkmm-devel >= 2.0.1
 BuildRequires:	libgnomecanvas-devel >= 2.0.0
