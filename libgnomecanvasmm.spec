@@ -10,6 +10,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.0/%{name}-%{version}.t
 URL:		http://www.gnome.org/
 BuildRequires:	gtkmm-devel >= 2.2.7
 BuildRequires:	libgnomecanvas-devel >= 2.3.6
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
