@@ -1,14 +1,14 @@
 Summary:	C++ wrappers for libgnomecanvas
 Summary(pl):	Interfejsy C++ dla libgnomecanvas
 Name:		libgnomecanvasmm
-Version:	2.5.1
-Release:	4
+Version:	2.5.2
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/%{name}/2.5/%{name}-%{version}.tar.bz2
-# Source0-md5:	65f6340f46789416de00dc6b3714b035
+# Source0-md5:	dbf21a5ca571f379aadb8d033ac42ae2
 URL:		http://www.gnome.org/
-BuildRequires:	gtkmm-devel >= 2.3.7
+BuildRequires:	gtkmm-devel >= 2.3.8
 BuildRequires:	libgnomecanvas-devel >= 2.6.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,7 +24,7 @@ Summary:	Devel files for libgnomecanvasmm
 Summary(pl):	Pliki nag³ówkowe dla libgnomecanvasmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtkmm-devel >= 2.3.7
+Requires:	gtkmm-devel >= 2.3.8
 Requires:	libart_lgpl-devel >= 2.3.16
 Requires:	libgnomecanvas-devel >= 2.6.0
 
@@ -76,7 +76,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libgnomecanvasmm*.so
 %{_libdir}/libgnomecanvasmm*.la
-%{_libdir}/%{name}-2.0
 %{_libdir}/%{name}-2.6
 %{_includedir}/%{name}-2.6
 %{_pkgconfigdir}/%{name}-2.6.pc
