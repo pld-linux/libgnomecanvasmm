@@ -2,7 +2,7 @@ Summary:	C++ wrappers for libgnomecanvas
 Summary(pl):	Interfejsy C++ dla libgnomecanvas
 Name:		libgnomecanvasmm
 Version:	2.14.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://ftp.gnome.org/pub/gnome/sources/libgnomecanvasmm/2.14/%{name}-%{version}.tar.bz2
@@ -10,7 +10,7 @@ Source0:	http://ftp.gnome.org/pub/gnome/sources/libgnomecanvasmm/2.14/%{name}-%{
 URL:		http://www.gnome.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gtkmm-devel >= 2.8.0
+BuildRequires:	gtkmm-devel >= 2.9.10
 BuildRequires:	libgnomecanvas-devel >= 2.14.0
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
@@ -28,7 +28,7 @@ Summary:	Devel files for libgnomecanvasmm
 Summary(pl):	Pliki nag³ówkowe dla libgnomecanvasmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	gtkmm-devel >= 2.8.0
+Requires:	gtkmm-devel >= 2.9.10
 Requires:	libart_lgpl-devel >= 2.3.16
 Requires:	libgnomecanvas-devel >= 2.14.0
 
