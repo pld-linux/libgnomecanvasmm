@@ -1,5 +1,5 @@
 Summary:	C++ wrappers for libgnomecanvas
-Summary(pl.UTF-8):   Interfejsy C++ dla libgnomecanvas
+Summary(pl.UTF-8):	Interfejsy C++ dla libgnomecanvas
 Name:		libgnomecanvasmm
 Version:	2.16.0
 Release:	1
@@ -25,7 +25,7 @@ Interfejsy C++ dla libgnomecanvas.
 
 %package devel
 Summary:	Devel files for libgnomecanvasmm
-Summary(pl.UTF-8):   Pliki nagłówkowe dla libgnomecanvasmm
+Summary(pl.UTF-8):	Pliki nagłówkowe dla libgnomecanvasmm
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.10.0
@@ -40,7 +40,7 @@ Pliki nagłówkowe dla libgnomecancasmm.
 
 %package static
 Summary:	libgnomecanvasmm static library
-Summary(pl.UTF-8):   Biblioteka statyczna libgnomecanvasmm
+Summary(pl.UTF-8):	Biblioteka statyczna libgnomecanvasmm
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
